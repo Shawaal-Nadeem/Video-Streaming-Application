@@ -1,5 +1,4 @@
-markdown
-Copy code
+
 # Video Streaming Application Setup
 
 This guide will help you set up a video streaming application using Node.js, Express, and various other packages.
