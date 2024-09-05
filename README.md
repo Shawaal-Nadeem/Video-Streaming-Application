@@ -9,35 +9,35 @@ Run the following command to create a `package.json` file:
 
 ```bash
 npm init -y
+```
 Step 2: Install Required Packages
 Install the necessary packages by running:
 
-bash
-Copy code
+```bash
 npm install cors express multer uuid
 npm install --save-dev nodemon
+```
 Step 3: Update package.json
 Open your package.json file and add "type": "module" to enable ES module syntax. Also, update the "scripts" section to use nodemon for development.
 
 Replace:
 
-json
-Copy code
+```json
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1"
 },
+```
 With:
 
-json
-Copy code
+```json
 "scripts": {
   "start": "nodemon index.js"
 },
+```
 Step 4: Create index.js File
 Create an index.js file at the root of your project directory. This file will contain your Express server setup and configuration.
 
-js
-Copy code
+```js
 import express from "express";
 import cors from 'cors';
 import multer from "multer";
@@ -119,10 +119,11 @@ app.post('/upload', upload.single('file'), (req, res) => {
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
 });
+```
 Running the Application
 To start the server, use the following command:
 
-bash
-Copy code
+```bash
 npm start
+```
 This will run the server with nodemon, which automatically restarts the server on file changes.
